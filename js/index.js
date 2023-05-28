@@ -280,6 +280,7 @@ function clearCartItem(product) {
         noItem.classList.remove('d-none');
         noItem.classList.add('d-block');
     }
+    subtotal.innerText = getsubtotal();
 }
 
 function updateCart(cart) {
