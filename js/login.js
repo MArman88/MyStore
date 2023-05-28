@@ -16,10 +16,14 @@ btnLogin.addEventListener('click', () => {
         if (isReadyForLogin(email, password)) {
             window.location.href = './index.html'
         } else {
+            passwordConfirmInput.value = '';
+            passwordInput.value = '';
             toastBody.innerText = "Email/Password is invalid";
             new bootstrap.Toast(toastDiv).show();
         }
     } else {
+        passwordConfirmInput.value = '';
+        passwordInput.value = '';
         toastBody.innerText = "Passwords didn't match. Try again";
         new bootstrap.Toast(toastDiv).show();
     }

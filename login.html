@@ -83,26 +83,30 @@
             </div>
 
             <button id="btnLogin"
-                class="btn brand-bg position-relative start-50 translate-middle mt-5 px-5 text-white fw-bold">LOGIN</button>
+                class="btn brand-bg position-relative start-50 translate-middle mt-5 px-5 text-white fw-bold shadow-none">LOGIN</button>
 
         </div>
-
     </div>
 
-    <div id="toastDiv"
-        class="float-end position-absolute bottom-0 end-0 translate-middle toast align-items-center text-white bg-primary border-0"
-        style="z-index: 5;" role="alert" aria-live="assertive" aria-atomic="true">
-        <div class="d-flex">
-            <div id="toastBody" class="toast-body">
-                Check your email and password. One of them is wrong.
+
+
+    <div class="position-absolute start-50 translate-middle-x mx-auto" style="bottom: 48px;">
+        <div id="toastDiv" class="toast align-items-center text-white brand-bg border-0" role="alert"
+            aria-live="assertive" aria-atomic="true" data-bs-delay="3000">
+            <div class="d-flex">
+                <div id="toastBody" class="toast-body">
+                    Email/password is incorrect.
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto shadow-none" data-bs-dismiss="toast"
+                    aria-label="Close"></button>
             </div>
-            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
-                aria-label="Close"></button>
         </div>
     </div>
 
     <footer>
+
         <div class="container">
+
             <div class="position-fixed bottom-0 start-0 end-0 brand-bg-light" style="height: 32px; z-index: 5;">
                 <div class="my-1">
                     <p class="text-center m-0">
