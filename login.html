@@ -46,37 +46,43 @@
             </div>
         </nav>
     </header>
-    <div class="position-absolute top-50 start-50 translate-middle">
+    <div class="position-absolute top-50 start-50 translate-middle w-75">
         <div class="brand-bg-light rounded shadow-sm">
-            <div class="d-flex flex-row flex-wrap">
+            <div class="d-flex flex-row flex-wrap justify-content-center">
                 <div class="p-3">
-                    <img src="assets/white_logo.png" style="aspect-ratio: 4/3; max-width: 100%;" alt="" srcset="">
+                    <img src="assets/white_logo.png" style="aspect-ratio: 4/3;" alt="" srcset="">
                 </div>
-                <div class="p-3">
+                <div class="p-3 flex-grow-1">
                     <div class="input-group mb-2">
                         <div class="input-group-prepend d-none d-md-inline">
-                            <span class="input-group-text" id="emailDescriber">ইমেইল</span>
+                            <span class="input-group-text fw-light" style="width: 120px;"
+                                id="emailDescriber">ইমেইল</span>
                         </div>
-                        <input type="text" id="emailInput" class="form-control" placeholder="আপনার ইমেইলটি দিন"
-                            aria-label="UserEmain" aria-describedby="emailDescriber">
+                        <input type="text" id="emailInput" class="form-control is-invalid"
+                            placeholder="আপনার ইমেইলটি দিন" aria-label="UserEmain" aria-describedby="emailDescriber"
+                            required>
+                        <div class="invalid-feedback">একটি বৈধ ইমেইল দিন</div>
                     </div>
 
                     <div class="input-group mb-2">
                         <div class="input-group-prepend d-none d-md-inline">
-                            <span class="input-group-text" id="passwordDescriber">পাসওয়ার্ড</span>
+                            <span class="input-group-text" style="width: 120px;" id="passwordDescriber">পাসওয়ার্ড</span>
                         </div>
-                        <input type="password" id="passwordInput" class="form-control"
+                        <input type="password" id="passwordInput" class="form-control is-invalid"
                             placeholder="আপনার পাসওয়ার্ডটি দিন" aria-label="UserPasswrd"
-                            aria-describedby="passwordDescriber">
+                            aria-describedby="passwordDescriber" required>
+                        <div class="invalid-feedback">পাসওয়ার্ড খালি রাখা যাবে না</div>
                     </div>
 
                     <div class="input-group mb-2 w-100">
                         <div class="input-group-prepend d-none d-md-inline">
-                            <span class="input-group-text" id="passwordConfirmDescriber">পুনঃ পাসওয়ার্ড</span>
+                            <span class="input-group-text" style="width: 120px;" id="passwordConfirmDescriber">পুনঃ
+                                পাসওয়ার্ড</span>
                         </div>
                         <input type="password" id="passwordConfirmInput" class="form-control"
                             placeholder="পাসওয়ার্ডটি পুনরায় দিন" aria-label="UserPasswrdConfirm"
                             aria-describedby="passwordConfirmDescriber">
+                        <div class="invalid-feedback">পাসওয়ার্ড মেলেনি</div>
                     </div>
 
                 </div>
