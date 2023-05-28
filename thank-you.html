@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/shared.css">
+    <title>Home</title>
+
+    <script src="js/data.js"></script>
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon.ico">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+</head>
+
+<body>
+    <header class="brand-bg brand-forecolor fixed-top">
+        <nav class="navbar navbar-dark navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/brand-logo.png" style="height: 48px;" alt="" srcset="">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="d-flex w-100 flex-column flex-md-row">
+                        <div class="navbar-nav me-auto mb-2 mb-lg-0 w-75">
+                            <input class="form-control me-2 my-auto" style="height: 42px;" type="search"
+                                placeholder="পণ্য়ের জন্য অনুসন্ধান করুন" aria-label="Search">
+                        </div>
+                        <span>
+                            <label id="userLabel" class="fw-bold text-white text-start text-md-end"></label>
+                            <button id="btnLogout"
+                                class="btn text-white fw-bold brand-bg-light shadow-nones">LOGOUT</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="container position-absolute top-50 translate-middle-y">
+            <div class="row justify-content-center">
+                <div class="col col-lg-6 text-center">
+                    <img src="assets/thank-you.gif" class="d-block mx-auto" alt="">
+                    <button id="btnBack" class="btn btn-success mt-5 text-uppercase shadow-none">Go Back</button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="position-fixed bottom-0 start-0 end-0 brand-bg-light" style="height: 32px; z-index: 5;">
+                <div class="my-1">
+                    <p class="text-center m-0">
+                        Copyright © 2023 - sindabad.com Ltd. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script>
+        cart = [];
+        document.getElementById('btnBack').addEventListener('click', () => {
+            window.location.href = './index.html';
+        });
+        let userName = getUserInformation();
+        if (userName) {
+            document.getElementById('userLabel').innerHTML = `<b>${userName.name}</b>`;
+        }
+
+        document.getElementById('btnLogout').addEventListener('click', () => {
+            clearUserInformation();
+            window.location.href = './login.html';
+        })
+    </script>
+
+</body>
+
+</html>

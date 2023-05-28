@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/shared.css">
+    <title>Home</title>
+
+
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon.ico">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <script src="js/data.js"></script>
+</head>
+
+<body>
+
+    <header class="brand-bg brand-forecolor fixed-top">
+        <nav class="navbar navbar-dark navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/brand-logo.png" style="height: 48px;" alt="" srcset="">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="d-flex w-100 flex-column flex-md-row">
+                        <div class="navbar-nav me-auto mb-2 mb-lg-0 w-75">
+                            <input class="form-control me-2 my-auto" style="height: 42px;" type="search"
+                                placeholder="পণ্য়ের জন্য অনুসন্ধান করুন" aria-label="Search">
+                        </div>
+                        <span>
+                            <label id="userLabel" class="fw-bold text-white text-start text-md-end"></label>
+                            <button id="btnLogout" class="btn text-white fw-bold brand-bg-light">LOGOUT</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="banner" class="mt-5 pt-3">
+        <div id="bannerSlider" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#bannerSlider" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#bannerSlider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#bannerSlider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="assets/banner-1.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/banner-2.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/banner-3.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#bannerSlider" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#bannerSlider" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+        </div>
+    </section>
+
+    <section id="personal-care" class="container mt-5">
+        <div>
+            <h3>ব্যক্তিগত স্বাস্থ্য ও সুরক্ষা</h3>
+            <div id="container-personal" class="d-flex flex-row flex-wrap align-items-start">
+
+            </div>
+        </div>
+
+
+    </section>
+
+    <section id="food-grocery" class="container mt-5">
+        <div>
+            <h3 class="">খাদ্য ও মুদি সামগ্রী</h3>
+            <div id="container-grocery" class="d-flex flex-row flex-wrap">
+
+            </div>
+        </div>
+    </section>
+
+    <section id="make-up-items" class="container mt-5">
+        <div>
+            <h3>মেকআপ</h3>
+            <div id="container-makeup-items" class="d-flex flex-row flex-wrap">
+
+            </div>
+        </div>
+    </section>
+
+    <section id="cart-items" class="mt-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col col-lg-6">
+                    <h3 class="text-center">Cart Items</h3>
+                    <div id="cart-container">
+                    </div>
+                    <div class="d-flex mt-3">
+                        <div class="w-75"></div>
+                        <span class="flex-shrink-0">
+                            <b>Subtotal(BDT)<span id="subtotal" class="mx-5">0</span></b>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section id="place-order" class="my-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col col-lg-6 text-center">
+                    <p id="no-item" class="d-block text-center">There is no item in your cart</p>
+                    <button id="btnOrder" class="btn btn-success text-uppercase d-none shadow-none">Place Order</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="position-fixed bottom-0 start-0 end-0 brand-bg-light" style="height: 32px; z-index: 5;">
+                <div class="my-1">
+                    <p class="text-center m-0">
+                        Copyright © 2023 - sindabad.com Ltd. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>

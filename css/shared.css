@@ -1,0 +1,19 @@
+.brand-bg {
+    background: #E91E63 !important;
+}
+
+.brand-forecolor {
+    color: #ffffff !important;
+}
+
+.brand-text {
+    color: #E91E63 !important;
+}
+
+nav .navbar-nav li a {
+    color: white !important;
+}
+
+.brand-bg-light {
+    background: #e4b7c6 !important;
+}

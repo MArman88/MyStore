@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/shared.css">
+    <title>Home</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon.ico">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <script src="js/data.js"></script>
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            box-sizing: border-box;
+        }
+    </style>
+
+</head>
+
+<body class="bg-white">
+    <header class="brand-bg brand-forecolor">
+        <nav class="navbar navbar-dark navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/brand-logo.png" style="height: 48px;" alt="" srcset="">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="d-flex w-100 flex-column flex-md-row">
+                        <div class="navbar-nav me-auto mb-2 mb-lg-0 w-75">
+                            <input class="form-control me-2 my-auto" style="height: 42px;" type="search"
+                                placeholder="পণ্য়ের জন্য অনুসন্ধান করুন" aria-label="Search">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="position-absolute top-50 start-50 translate-middle">
+        <div class="brand-bg-light rounded shadow-sm">
+            <div class="d-flex flex-row flex-wrap">
+                <div class="p-3">
+                    <img src="assets/white_logo.png" style="aspect-ratio: 4/3; max-width: 100%;" alt="" srcset="">
+                </div>
+                <div class="p-3">
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend d-none d-md-inline">
+                            <span class="input-group-text" id="emailDescriber">ইমেইল</span>
+                        </div>
+                        <input type="text" id="emailInput" class="form-control" placeholder="আপনার ইমেইলটি দিন"
+                            aria-label="UserEmain" aria-describedby="emailDescriber">
+                    </div>
+
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend d-none d-md-inline">
+                            <span class="input-group-text" id="passwordDescriber">পাসওয়ার্ড</span>
+                        </div>
+                        <input type="password" id="passwordInput" class="form-control"
+                            placeholder="আপনার পাসওয়ার্ডটি দিন" aria-label="UserPasswrd"
+                            aria-describedby="passwordDescriber">
+                    </div>
+
+                    <div class="input-group mb-2 w-100">
+                        <div class="input-group-prepend d-none d-md-inline">
+                            <span class="input-group-text" id="passwordConfirmDescriber">পুনঃ পাসওয়ার্ড</span>
+                        </div>
+                        <input type="password" id="passwordConfirmInput" class="form-control"
+                            placeholder="পাসওয়ার্ডটি পুনরায় দিন" aria-label="UserPasswrdConfirm"
+                            aria-describedby="passwordConfirmDescriber">
+                    </div>
+
+                </div>
+            </div>
+
+            <button id="btnLogin"
+                class="btn brand-bg position-relative start-50 translate-middle mt-5 px-5 text-white fw-bold">LOGIN</button>
+
+        </div>
+
+    </div>
+
+    <div id="toastDiv"
+        class="float-end position-absolute bottom-0 end-0 translate-middle toast align-items-center text-white bg-primary border-0"
+        style="z-index: 5;" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+            <div id="toastBody" class="toast-body">
+                Check your email and password. One of them is wrong.
+            </div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                aria-label="Close"></button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="position-fixed bottom-0 start-0 end-0 brand-bg-light" style="height: 32px; z-index: 5;">
+                <div class="my-1">
+                    <p class="text-center m-0">
+                        Copyright © 2023 - sindabad.com Ltd. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="js/login.js"></script>
+</body>
+
+</html>
